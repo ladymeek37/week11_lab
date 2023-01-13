@@ -152,15 +152,39 @@ function findItalianFoodServingFivePlus(){
   return results;
 }
 let italianFoodFive = findItalianFoodServingFivePlus();
-console.log("Italian foods with a serving greater than five:", italianFoodFive);
+console.log("Italian foods with a serving greater than five: ", italianFoodFive);
 
 //3. Create a function that will return only dishes whose id number matches their serving count.
 //Filter
 
-function idMatchServing
+function idMatchServing(){
+  let results = dishes.filter(function (el){
+    if (el.id === el.servings) {
+      return true;
+    } else {
+      return false;
+    }
+  });
+  return results;
+}
+let idServingFoods = idMatchServing();
+console.log("Foods that have the same id number and serving: ", idServingFoods);
 
 //4. Create a function that will return only dishes whose serving count is even.
 //Filter
+
+function evenServingFoods(){
+  let results = dishes.filter(function (el){
+    if (el.servings % 2 === 0) {
+      return true;
+    } else {
+      return false;
+    }
+  });
+  return results;
+}
+let evenFoods = evenServingFoods();
+console.log("Foods that have even servings:", evenFoods);
 
 //5. Create a function that will return dishes whose ingredients array is "tomato" and "cheese".
 //Filter
