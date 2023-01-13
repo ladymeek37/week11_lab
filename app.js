@@ -223,6 +223,26 @@ console.log(cuisineAndFood);
 //This function should return objects 11-13 with their names changed to "Vegetarian Lasagna", "Vegetarian Falafel", "Vegetarian Chili"
 //Map, Filter
 
+let theCuisineAndFood = dishes.map(function(el){
+  return el.cuisine + " " + el.name
+});
+
+function vegetarianCuisine(){
+  let results = dishes.filter(function(el){
+    if (el.cuisine === "Vegetarian"){
+      return true;
+    } else{
+      return false;
+    }
+  });
+  return results;
+}
+
+let vegCuisineAndFood = vegetarianCuisine();
+console.log("Vegetarian dishes:", vegCuisineAndFood);
+
+
+
 // <<<<<<<<<<<<<<<<< BONUS <<<<<<<<<<<<<<<<<
 //9. Create a function that will return dishes whose ingredients array INCLUDES "chickpea".
 //Hint: You do not need to check the array's indexes to find out what the array INCLUDES.
